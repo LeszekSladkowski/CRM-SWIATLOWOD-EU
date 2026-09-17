@@ -1,0 +1,10 @@
+MASTER PIXEL — MENU GŁÓWNE
+
+Zasada walidacji:
+- źródło produkcyjnego wyglądu: 01_GRAFIKI_KART_WEJSCIOWE/01_MENU_GLOWNE_MASTER_1TO1.png
+- Git blob SHA: bfeb4e05476486d215b32444e561d96a184cf0df
+- ekran źródłowy ma proporcję referencyjną 709 × 1536
+- aplikacja nie może składać wyglądu pulpitu z regenerowanych warstw BASE/MEDIA/UI
+- warstwa LIVE może przykrywać tylko elementy dynamiczne: ONLINE/OFFLINE, GPS, PDF, język oraz tłumaczenia po zmianie języka
+- w języku polskim statyczne tytuły, kafle i baner mają pochodzić bezpośrednio z MASTER-a
+- przed każdą kolejną zmianą wizualną porównanie z MASTER-em jest obowiązkowe

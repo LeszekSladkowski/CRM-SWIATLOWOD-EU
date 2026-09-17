@@ -7,22 +7,17 @@
   <meta name="color-scheme" content="dark">
   <title>CRM ŚWIATŁOWÓD EU</title>
   <link rel="manifest" href="./manifest.webmanifest">
-  <link rel="stylesheet" href="./styles.css?v=pulpit01-korekta01">
-  <script>
-    if ('scrollRestoration' in history) history.scrollRestoration = 'manual';
-    window.addEventListener('pageshow', () => window.scrollTo(0, 0), { passive: true });
-    window.addEventListener('load', () => window.scrollTo(0, 0), { passive: true });
-  </script>
+  <link rel="stylesheet" href="./styles.css?v=pixel-master-02">
 </head>
 <body>
   <main id="viewport" aria-label="CRM ŚWIATŁOWÓD EU">
-    <section id="designStage" aria-label="Menu główne CRM ŚWIATŁOWÓD EU">
-      <img class="stage-layer layer-base" src="./02_TLO_MASTER/01_MENU_GLOWNE_TLO_MASTER.png?v=pulpit01-korekta01" alt="" draggable="false">
-      <img class="stage-layer layer-media" src="./03_MEDIA_URZADZENIA/01_MENU_GLOWNE_MEDIA_URZADZENIA.png?v=pulpit01-korekta01" alt="" draggable="false">
-      <img class="stage-layer layer-ui" src="./04_RAMKI_IKONY_UI/01_MENU_GLOWNE_RAMKI_IKONY_UI.png?v=pulpit01-korekta01" alt="" draggable="false">
+    <section id="designStage" aria-label="Menu główne CRM ŚWIATŁOWÓD EU" data-master="pixel-1to1">
+      <!-- JEDYNE ŹRÓDŁO WIZUALNE: zatwierdzony pełny MASTER. Nie składamy już pulpitu z regenerowanych warstw. -->
+      <img class="master-pixel-layer" src="./01_GRAFIKI_KART_WEJSCIOWE/01_MENU_GLOWNE_MASTER_1TO1.png?v=pixel-master-02" alt="" draggable="false">
 
+      <!-- Warstwa LIVE zawiera tylko elementy, które MUSZĄ reagować na stan systemu lub język. -->
       <div id="liveLayer" class="live-layer">
-        <header class="title-zone">
+        <header class="title-zone live-translation-zone">
           <h1>LM-Technic-Światłowód-system</h1>
           <p data-i18n="subtitle">MENU GŁÓWNE / PANEL STEROWANIA</p>
         </header>
@@ -30,7 +25,7 @@
         <section class="status-strip" aria-label="Status systemu">
           <div id="onlineStatus" class="status-cell status-off" aria-live="polite">
             <span class="status-dot" aria-hidden="true"></span>
-            <span class="status-copy status-copy-online"><strong data-status-label="online">OFFLINE</strong></span>
+            <span class="status-copy"><strong data-status-label="online">OFFLINE</strong></span>
           </div>
 
           <div id="gpsStatus" class="status-cell status-off" aria-live="polite">
@@ -77,13 +72,17 @@
           <button class="tile-live tile-9" data-module="ustawienia" type="button"><span class="tile-copy"><strong data-i18n="m9t">USTAWIENIA</strong><small data-i18n="m9d">KONFIGURACJA<br>APLIKACJI</small></span></button>
         </nav>
 
-        <section class="bottom-live" aria-label="TFFBAU">
+        <section class="bottom-live live-translation-zone" aria-label="TFFBAU">
           <div class="bottom-brand"><strong>TFFBAU</strong><small data-i18n="tffbauDesc">BUDOWA KANALIZACJI TELETECHNICZNEJ<br>RUROCIĄGI ŚWIATŁOWODOWE</small></div>
           <p class="bottom-slogan" data-i18n="slogan">Łączymy świat<br>lepszymi możliwościami</p>
         </section>
       </div>
     </section>
   </main>
-  <script src="./app.js?v=pulpit01-korekta01" defer></script>
+  <script>
+    if ('scrollRestoration' in history) history.scrollRestoration = 'manual';
+    window.addEventListener('pageshow', () => window.scrollTo(0, 0), { once: true });
+  </script>
+  <script src="./app.js?v=pixel-master-02" defer></script>
 </body>
 </html>

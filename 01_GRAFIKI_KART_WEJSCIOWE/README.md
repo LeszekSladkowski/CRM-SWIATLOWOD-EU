@@ -1,7 +1,5 @@
-# FOLDER 1 — GRAFIKI KART WEJŚCIOWE
+# README — 01_GRAFIKI_KART_WEJSCIOWE
 
-**TU WRZUCAJ TYLKO PEŁNY ZATWIERDZONY MASTER ŹRÓDŁOWY 1:1.**
-
-To jest wzorzec przed rozkładem na warstwy. Nie wrzucaj tu BASE, MEDIA, UI ani MASTER REFERENCJI.
-
-Przykład nazwy: `01_MENU_GLOWNE_MASTER_WEJSCIOWY.png`
+PEŁNY MASTER WEJŚCIOWY 1:1.
+Dla MENU GŁÓWNEGO obowiązuje plik `01_MENU_GLOWNE_MASTER_1TO1.png`.
+Nie zastępować go złożeniem regenerowanych warstw, jeżeli wynik różni się wizualnie od MASTER-a.
