@@ -1,0 +1,86 @@
+<!doctype html>
+<html lang="pl">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=5, user-scalable=yes, viewport-fit=cover">
+  <meta name="theme-color" content="#02070c">
+  <meta name="color-scheme" content="dark">
+  <title>USTAWIENIA — CRM ŚWIATŁOWÓD EU</title>
+  <link rel="stylesheet" href="./settings.css?v=ustawienia01">
+</head>
+<body>
+  <main class="settings-shell">
+    <header class="settings-head">
+      <a class="back-btn" href="./" aria-label="Powrót do menu">←</a>
+      <div>
+        <p class="eyebrow">LM-TECHNIC • ŚWIATŁOWÓD • SYSTEM</p>
+        <h1 data-i18n="settingsTitle">USTAWIENIA</h1>
+        <p class="sub" data-i18n="settingsSub">CENTRUM SYSTEMU I AKTUALIZACJI</p>
+      </div>
+      <div id="miniOnline" class="mini-state off"><span></span><b>OFFLINE</b></div>
+    </header>
+
+    <nav class="card-tabs" aria-label="Karty ustawień">
+      <button class="tab active" data-card="1"><b>1</b><span data-i18n="tabUpdates">AKTUALIZACJE</span></button>
+      <button class="tab" data-card="2"><b>2</b><span data-i18n="tabSystem">SYSTEM</span></button>
+      <button class="tab" data-card="3"><b>3</b><span data-i18n="tabBackups">BACKUPY</span></button>
+      <button class="tab" data-card="4"><b>4</b><span data-i18n="tabShare">WYŚLIJ / MENU</span></button>
+    </nav>
+
+    <section class="settings-card active" data-panel="1">
+      <div class="card-title-row">
+        <div><p class="card-no">KARTA 1</p><h2 data-i18n="updatesTitle">AKTUALIZACJA APLIKACJI</h2></div>
+        <button id="syncBtn" class="sync-btn" type="button" aria-label="Synchronizuj">
+          <svg viewBox="0 0 64 64" aria-hidden="true"><path d="M15 27a18 18 0 0 1 31-10l5 5"/><path d="M51 13v9h-9"/><path d="M49 37a18 18 0 0 1-31 10l-5-5"/><path d="M13 51v-9h9"/></svg>
+        </button>
+      </div>
+      <div class="status-banner" id="updateBanner"><span class="lamp"></span><div><b id="updateHeadline">SPRAWDZANIE...</b><small id="updateDetail">Synchronizacja danych systemowych</small></div></div>
+      <div class="info-grid">
+        <div class="info-box"><small data-i18n="version">WERSJA</small><strong id="appVersion">—</strong></div>
+        <div class="info-box"><small>BUILD</small><strong id="appBuild">—</strong></div>
+        <div class="info-box wide"><small data-i18n="deployedCommit">COMMIT WDROŻONY</small><strong class="mono" id="deployedCommit">—</strong></div>
+        <div class="info-box wide"><small data-i18n="latestCommit">NAJNOWSZY MAIN</small><strong class="mono" id="latestCommit">—</strong></div>
+        <div class="info-box"><small data-i18n="deploy">DEPLOYMENT</small><strong id="deployState">—</strong></div>
+        <div class="info-box"><small data-i18n="channel">KANAŁ</small><strong id="appChannel">—</strong></div>
+      </div>
+      <h3 data-i18n="history">HISTORIA OSTATNICH AKTUALIZACJI</h3>
+      <div id="commitHistory" class="history-list"><div class="loading">...</div></div>
+    </section>
+
+    <section class="settings-card" data-panel="2">
+      <p class="card-no">KARTA 2</p><h2 data-i18n="systemTitle">INFORMACJE O SYSTEMIE</h2>
+      <div class="system-list">
+        <div><span data-i18n="device">URZĄDZENIE / PRZEGLĄDARKA</span><b id="deviceInfo">—</b></div>
+        <div><span>PWA</span><b id="pwaInfo">—</b></div>
+        <div><span data-i18n="network">SIEĆ</span><b id="networkInfo">—</b></div>
+        <div><span>GPS</span><b id="gpsInfo">—</b></div>
+        <div><span>PDF</span><b id="pdfInfo">—</b></div>
+        <div><span data-i18n="language">JĘZYK</span><b id="languageInfo">—</b></div>
+        <div><span>SERVICE WORKER</span><b id="swInfo">—</b></div>
+        <div><span data-i18n="screen">EKRAN</span><b id="screenInfo">—</b></div>
+        <div><span data-i18n="masterPoint">PUNKT MASTER</span><b id="masterInfo">—</b></div>
+      </div>
+    </section>
+
+    <section class="settings-card" data-panel="3">
+      <p class="card-no">KARTA 3</p><h2 data-i18n="backupsTitle">MAGAZYN BACKUPÓW</h2>
+      <p class="hint" data-i18n="backupsHint">Gałęzie MASTER i BACKUP są pobierane bezpośrednio z repozytorium.</p>
+      <div id="backupList" class="backup-list"><div class="loading">...</div></div>
+    </section>
+
+    <section class="settings-card" data-panel="4">
+      <p class="card-no">KARTA 4</p><h2 data-i18n="shareTitle">WYŚLIJ / OTWÓRZ MENU</h2>
+      <div class="action-stack">
+        <button id="shareReport" class="action primary" type="button" data-i18n="shareReport">WYŚLIJ RAPORT SYSTEMU</button>
+        <button id="downloadReport" class="action" type="button" data-i18n="downloadReport">ZAPISZ RAPORT JSON</button>
+        <a class="action" href="https://github.com/LeszekSladkowski/CRM-SWIATLOWOD-EU" target="_blank" rel="noopener" data-i18n="openRepo">OTWÓRZ REPOZYTORIUM</a>
+        <a class="action gold" href="./" data-i18n="openMenu">WRÓĆ DO MENU GŁÓWNEGO</a>
+      </div>
+      <div class="report-preview"><small data-i18n="reportPreview">PODGLĄD RAPORTU</small><pre id="reportPreview">—</pre></div>
+    </section>
+
+    <footer><span id="footerVersion">CRM ŚWIATŁOWÓD EU</span><span>Samsung Galaxy S24 Ultra • PION</span></footer>
+  </main>
+  <script src="./settings.js?v=ustawienia01" defer></script>
+</body>
+</html>
