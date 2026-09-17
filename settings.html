@@ -3,58 +3,42 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=5, user-scalable=yes, viewport-fit=cover">
-  <meta name="theme-color" content="#02070c">
+  <meta name="theme-color" content="#000000">
   <meta name="color-scheme" content="dark">
   <title>USTAWIENIA — CRM ŚWIATŁOWÓD EU</title>
-  <link rel="stylesheet" href="./settings-master.css?v=karta0-01">
+  <link rel="stylesheet" href="./settings-karta0.css?v=chirurgia02">
 </head>
 <body>
-  <main id="settingsViewport" aria-label="Ustawienia CRM ŚWIATŁOWÓD EU">
-    <section id="settingsStage" aria-label="Karta 0 ustawień" data-master="USTAWIENIA-KARTA-0">
-      <img class="master-layer base-layer" src="./02_TLO_MASTER/02_USTAWIENIA_KARTA_0_TLO_MASTER.png?v=karta0-01" alt="" draggable="false">
-      <img class="master-layer media-layer" src="./03_MEDIA_URZADZENIA/02_USTAWIENIA_KARTA_0_MEDIA_URZADZENIA.png?v=karta0-01" alt="" draggable="false">
-
-      <div class="live-layer">
-        <button id="backZone" class="click-zone back-zone" type="button" aria-label="Wróć"></button>
-        <button id="syncZone" class="click-zone sync-zone" type="button" aria-label="Synchronizuj"></button>
-        <button class="click-zone row-zone row1" type="button" data-card-target="1" aria-label="Karta 1 aktualizacja aplikacji"></button>
-        <button class="click-zone row-zone row2" type="button" data-card-target="2" aria-label="Karta 2 informacje o systemie"></button>
-        <button class="click-zone row-zone row3" type="button" data-card-target="3" aria-label="Karta 3 magazyn backupów"></button>
-        <button class="click-zone row-zone row4" type="button" data-card-target="4" aria-label="Karta 4 wyślij lub otwórz menu"></button>
-        <button id="homeZone" class="click-zone home-zone" type="button" aria-label="Pulpit"></button>
-
-        <div id="syncLive" class="sync-live" aria-hidden="true">
-          <svg viewBox="0 0 64 64"><path d="M14 29a19 19 0 0 1 33-12l5 5"/><path d="M52 12v10H42"/><path d="M50 35a19 19 0 0 1-33 12l-5-5"/><path d="M12 52V42h10"/></svg>
-        </div>
-
-        <div class="live-text back-label" data-k="back">WRÓĆ</div>
-        <div class="live-text sync-label" data-k="sync">SYNCHRONIZUJ</div>
-        <div class="live-text title-main" data-k="settings">USTAWIENIA</div>
-        <div class="live-text title-sub" data-k="sub">L&M ŚWIATŁOWÓD SYSTEM</div>
-
-        <div id="liveDate" class="info info-date">--.--.----</div>
-        <div id="liveTime" class="info info-time">--:--</div>
-        <div class="info info-card" data-k="card0">KARTA 0</div>
-        <div class="info info-version"><span data-k="version">WERSJA:</span>&nbsp;<b id="liveVersion">V4.1.0</b></div>
-        <div id="liveOnline" class="info info-online offline"><span class="online-dot"></span><b>OFFLINE</b></div>
-
-        <div class="live-text section-title" data-k="sys">USTAWIENIA SYSTEMU</div>
-        <div class="live-text section-desc" data-k="desc">Aktualizacje, informacje techniczne, backupy i udostępnianie systemu.</div>
-
-        <div class="row-copy r1"><strong><span class="accent" data-k="c1">KARTA 1</span> — <span data-k="t1">AKTUALIZACJA APLIKACJI</span></strong><small data-k="d1">Wersja, postęp aktualizacji i kontrola systemu.</small></div>
-        <div class="chev c1">›</div>
-        <div class="row-copy r2"><strong><span class="accent" data-k="c2">KARTA 2</span> — <span data-k="t2">INFORMACJE O SYSTEMIE</span></strong><small data-k="d2">Wersja techniczna, build, tryb pracy i status.</small></div>
-        <div class="chev c2">›</div>
-        <div class="row-copy r3"><strong><span class="accent" data-k="c3">KARTA 3</span> — <span data-k="t3">MAGAZYN BACKUPÓW</span></strong><small data-k="d3">Kopie lokalne, import, przywracanie i historia.</small></div>
-        <div class="chev c3">›</div>
-        <div class="row-copy r4"><strong><span class="accent" data-k="c4">KARTA 4</span> — <span data-k="t4">WYŚLIJ DO / OTWÓRZ MENU</span></strong><small data-k="d4">E-mail, WhatsApp, GPChat i menu telefonu.</small></div>
-        <div class="chev c4">›</div>
-
-        <div class="live-text bottom-slogan"><span data-k="slogan">SZYBSZA KOMUNIKACJA • WIĘKSZE MOŻLIWOŚCI</span><br><span data-k="brand">L&M TECHNIC</span></div>
-        <div class="live-text home-text" data-k="desk">PULPIT</div>
-      </div>
+  <main id="settingsViewport" aria-label="Ustawienia CRM Światłowód EU">
+    <section id="settingsStage" aria-label="Karta 0 Ustawienia" data-master="709x1536">
+      <img id="settingsMaster" src="./01_GRAFIKI_KART_WEJSCIOWE/02_USTAWIENIA_KARTA_0_MASTER_1TO1.png?v=chirurgia02" alt="" draggable="false">
+      <svg id="settingsLive" viewBox="0 0 709 1536" preserveAspectRatio="xMidYMid meet" aria-label="Warstwa LIVE">
+        <rect class="cover" x="49" y="261" width="104" height="27" rx="3"/>
+        <text id="liveDate" class="live-text date-text" x="57" y="281">--.--.----</text>
+        <rect class="cover" x="197" y="261" width="53" height="27" rx="3"/>
+        <text id="liveTime" class="live-text time-text" x="202" y="281">--:--</text>
+        <rect class="cover" x="591" y="259" width="94" height="31" rx="4"/>
+        <circle id="netLamp" cx="604" cy="276" r="7"/>
+        <text id="netText" class="net-text" x="619" y="282">ONLINE</text>
+        <g id="syncVisual">
+          <circle class="sync-bg" cx="628" cy="78" r="42"/>
+          <g id="syncArrows">
+            <path d="M607 75 A22 22 0 0 1 645 61"/>
+            <path d="M643 53 L646 62 L636 63"/>
+            <path d="M649 82 A22 22 0 0 1 611 95"/>
+            <path d="M613 103 L610 94 L620 93"/>
+          </g>
+        </g>
+        <rect class="hitbox" data-action="back" x="31" y="35" width="124" height="122" rx="20"/>
+        <rect class="hitbox" data-action="sync" x="558" y="30" width="140" height="130" rx="20"/>
+        <rect class="hitbox" data-card="1" x="32" y="610" width="645" height="120" rx="18"/>
+        <rect class="hitbox" data-card="2" x="32" y="737" width="645" height="114" rx="18"/>
+        <rect class="hitbox" data-card="3" x="32" y="857" width="645" height="114" rx="18"/>
+        <rect class="hitbox" data-card="4" x="32" y="978" width="645" height="119" rx="18"/>
+        <rect class="hitbox" data-action="pulpit" x="25" y="1318" width="660" height="132" rx="22"/>
+      </svg>
     </section>
   </main>
-  <script src="./settings-master.js?v=karta0-01" defer></script>
+  <script src="./settings-karta0.js?v=chirurgia02" defer></script>
 </body>
 </html>
