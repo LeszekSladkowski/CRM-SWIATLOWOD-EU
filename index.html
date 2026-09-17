@@ -12,54 +12,18 @@
 <body>
   <main id="viewport" aria-label="CRM ŚWIATŁOWÓD EU">
     <section id="designStage" aria-label="Menu główne CRM ŚWIATŁOWÓD EU" data-master="pixel-1to1">
-      <!-- JEDYNE ŹRÓDŁO WIZUALNE: zatwierdzony pełny MASTER. Nie składamy już pulpitu z regenerowanych warstw. -->
       <img class="master-pixel-layer" src="./01_GRAFIKI_KART_WEJSCIOWE/01_MENU_GLOWNE_MASTER_1TO1.png?v=pixel-master-02" alt="" draggable="false">
-
-      <!-- Warstwa LIVE zawiera tylko elementy, które MUSZĄ reagować na stan systemu lub język. -->
       <div id="liveLayer" class="live-layer">
         <header class="title-zone live-translation-zone">
           <h1>LM-Technic-Światłowód-system</h1>
           <p data-i18n="subtitle">MENU GŁÓWNE / PANEL STEROWANIA</p>
         </header>
-
         <section class="status-strip" aria-label="Status systemu">
-          <div id="onlineStatus" class="status-cell status-off" aria-live="polite">
-            <span class="status-dot" aria-hidden="true"></span>
-            <span class="status-copy"><strong data-status-label="online">OFFLINE</strong></span>
-          </div>
-
-          <div id="gpsStatus" class="status-cell status-off" aria-live="polite">
-            <span class="gps-pin" aria-hidden="true"></span>
-            <span class="status-copy"><strong>GPS</strong><small data-status-label="gps">BRAK</small></span>
-          </div>
-
-          <div id="pdfStatus" class="status-cell status-off" aria-live="polite">
-            <span class="pdf-icon" aria-hidden="true">PDF</span>
-            <span class="status-copy"><strong>PDF</strong><small data-status-label="pdf">BRAK</small></span>
-          </div>
-
-          <label class="language-cell" for="languageSelect">
-            <span class="language-caption" data-i18n="language">JĘZYK</span>
-            <span class="language-control">
-              <span id="languageFlag" aria-hidden="true">🇵🇱</span>
-              <select id="languageSelect" aria-label="Wybór języka">
-                <option value="pl">POLSKI</option>
-                <option value="en">ENGLISH</option>
-                <option value="cs">ČEŠTINA</option>
-                <option value="da">DANSK</option>
-                <option value="de">DEUTSCH</option>
-                <option value="no">NORSK</option>
-                <option value="fr">FRANÇAIS</option>
-                <option value="ro">ROMÂNĂ</option>
-                <option value="tr">TÜRKÇE</option>
-                <option value="it">ITALIANO</option>
-                <option value="nl">NEDERLANDS</option>
-                <option value="uk">УКРАЇНСЬКА</option>
-              </select>
-            </span>
-          </label>
+          <div id="onlineStatus" class="status-cell status-off" aria-live="polite"><span class="status-dot" aria-hidden="true"></span><span class="status-copy"><strong data-status-label="online">OFFLINE</strong></span></div>
+          <div id="gpsStatus" class="status-cell status-off" aria-live="polite"><span class="gps-pin" aria-hidden="true"></span><span class="status-copy"><strong>GPS</strong><small data-status-label="gps">BRAK</small></span></div>
+          <div id="pdfStatus" class="status-cell status-off" aria-live="polite"><span class="pdf-icon" aria-hidden="true">PDF</span><span class="status-copy"><strong>PDF</strong><small data-status-label="pdf">BRAK</small></span></div>
+          <label class="language-cell" for="languageSelect"><span class="language-caption" data-i18n="language">JĘZYK</span><span class="language-control"><span id="languageFlag" aria-hidden="true">🇵🇱</span><select id="languageSelect" aria-label="Wybór języka"><option value="pl">POLSKI</option><option value="en">ENGLISH</option><option value="cs">ČEŠTINA</option><option value="da">DANSK</option><option value="de">DEUTSCH</option><option value="no">NORSK</option><option value="fr">FRANÇAIS</option><option value="ro">ROMÂNĂ</option><option value="tr">TÜRKÇE</option><option value="it">ITALIANO</option><option value="nl">NEDERLANDS</option><option value="uk">УКРАЇНСЬКА</option></select></span></label>
         </section>
-
         <nav id="moduleGrid" aria-label="Moduły CRM">
           <button class="tile-live tile-1" data-module="magistrala" type="button"><span class="tile-copy"><strong data-i18n="m1t">MAGISTRALA HK</strong><small data-i18n="m1d">WDMUCHIWANIE<br>ŚWIATŁOWODÓW</small></span></button>
           <button class="tile-live tile-2" data-module="przylacza" type="button"><span class="tile-copy"><strong data-i18n="m2t">PRZYŁĄCZA HKA</strong><small data-i18n="m2d">WDMUCHIWANIE<br>DO OBIEKTÓW</small></span></button>
@@ -71,17 +35,16 @@
           <button class="tile-live tile-8" data-module="moc" type="button"><span class="tile-copy"><strong data-i18n="m8t">POMIARY MOCY</strong><small data-i18n="m8d">POMIARY TŁUMIENIA<br>I MOCY OPTYCZNEJ</small></span></button>
           <button class="tile-live tile-9" data-module="ustawienia" type="button"><span class="tile-copy"><strong data-i18n="m9t">USTAWIENIA</strong><small data-i18n="m9d">KONFIGURACJA<br>APLIKACJI</small></span></button>
         </nav>
-
-        <section class="bottom-live live-translation-zone" aria-label="TFFBAU">
-          <div class="bottom-brand"><strong>TFFBAU</strong><small data-i18n="tffbauDesc">BUDOWA KANALIZACJI TELETECHNICZNEJ<br>RUROCIĄGI ŚWIATŁOWODOWE</small></div>
-          <p class="bottom-slogan" data-i18n="slogan">Łączymy świat<br>lepszymi możliwościami</p>
-        </section>
+        <section class="bottom-live live-translation-zone" aria-label="TFFBAU"><div class="bottom-brand"><strong>TFFBAU</strong><small data-i18n="tffbauDesc">BUDOWA KANALIZACJI TELETECHNICZNEJ<br>RUROCIĄGI ŚWIATŁOWODOWE</small></div><p class="bottom-slogan" data-i18n="slogan">Łączymy świat<br>lepszymi możliwościami</p></section>
       </div>
     </section>
   </main>
   <script>
     if ('scrollRestoration' in history) history.scrollRestoration = 'manual';
     window.addEventListener('pageshow', () => window.scrollTo(0, 0), { once: true });
+    window.addEventListener('crm:modulepress', (event) => {
+      if (event.detail && event.detail.module === 'ustawienia') window.location.href = './settings.html';
+    });
   </script>
   <script src="./app.js?v=pixel-master-02" defer></script>
 </body>
