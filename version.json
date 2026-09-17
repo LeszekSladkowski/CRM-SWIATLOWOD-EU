@@ -1,0 +1,10 @@
+{
+  "app": "CRM ŚWIATŁOWÓD EU",
+  "version": "0.1.0-roboczy",
+  "build": "2026.09.17.18",
+  "channel": "main",
+  "deployed_commit": "ed29d7da81a17cdccd73c9bad7a37f0444550676",
+  "master_branch": "MASTER-ROBOCZY-PULPIT-01-PIXEL",
+  "master_point": "PULPIT 01 PIXEL MASTER",
+  "updated_at": "2026-09-17T19:37:24Z"
+}
