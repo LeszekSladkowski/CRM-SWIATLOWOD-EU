@@ -7,14 +7,19 @@
   <meta name="color-scheme" content="dark">
   <title>CRM ŚWIATŁOWÓD EU</title>
   <link rel="manifest" href="./manifest.webmanifest">
-  <link rel="stylesheet" href="./styles.css?v=pulpit01">
+  <link rel="stylesheet" href="./styles.css?v=pulpit01-korekta01">
+  <script>
+    if ('scrollRestoration' in history) history.scrollRestoration = 'manual';
+    window.addEventListener('pageshow', () => window.scrollTo(0, 0), { passive: true });
+    window.addEventListener('load', () => window.scrollTo(0, 0), { passive: true });
+  </script>
 </head>
 <body>
   <main id="viewport" aria-label="CRM ŚWIATŁOWÓD EU">
     <section id="designStage" aria-label="Menu główne CRM ŚWIATŁOWÓD EU">
-      <img class="stage-layer layer-base" src="./02_TLO_MASTER/01_MENU_GLOWNE_TLO_MASTER.png?v=pulpit01" alt="" draggable="false">
-      <img class="stage-layer layer-media" src="./03_MEDIA_URZADZENIA/01_MENU_GLOWNE_MEDIA_URZADZENIA.png?v=pulpit01" alt="" draggable="false">
-      <img class="stage-layer layer-ui" src="./04_RAMKI_IKONY_UI/01_MENU_GLOWNE_RAMKI_IKONY_UI.png?v=pulpit01" alt="" draggable="false">
+      <img class="stage-layer layer-base" src="./02_TLO_MASTER/01_MENU_GLOWNE_TLO_MASTER.png?v=pulpit01-korekta01" alt="" draggable="false">
+      <img class="stage-layer layer-media" src="./03_MEDIA_URZADZENIA/01_MENU_GLOWNE_MEDIA_URZADZENIA.png?v=pulpit01-korekta01" alt="" draggable="false">
+      <img class="stage-layer layer-ui" src="./04_RAMKI_IKONY_UI/01_MENU_GLOWNE_RAMKI_IKONY_UI.png?v=pulpit01-korekta01" alt="" draggable="false">
 
       <div id="liveLayer" class="live-layer">
         <header class="title-zone">
@@ -25,29 +30,21 @@
         <section class="status-strip" aria-label="Status systemu">
           <div id="onlineStatus" class="status-cell status-off" aria-live="polite">
             <span class="status-dot" aria-hidden="true"></span>
-            <span class="status-copy">
-              <strong data-status-label="online">OFFLINE</strong>
-            </span>
+            <span class="status-copy status-copy-online"><strong data-status-label="online">OFFLINE</strong></span>
           </div>
 
           <div id="gpsStatus" class="status-cell status-off" aria-live="polite">
             <span class="gps-pin" aria-hidden="true"></span>
-            <span class="status-copy">
-              <strong>GPS</strong>
-              <small data-status-label="gps">BRAK</small>
-            </span>
+            <span class="status-copy"><strong>GPS</strong><small data-status-label="gps">BRAK</small></span>
           </div>
 
           <div id="pdfStatus" class="status-cell status-off" aria-live="polite">
             <span class="pdf-icon" aria-hidden="true">PDF</span>
-            <span class="status-copy">
-              <strong>PDF</strong>
-              <small data-status-label="pdf">BRAK</small>
-            </span>
+            <span class="status-copy"><strong>PDF</strong><small data-status-label="pdf">BRAK</small></span>
           </div>
 
           <label class="language-cell" for="languageSelect">
-            <span class="language-caption" data-i18n="language">LANGUAGE</span>
+            <span class="language-caption" data-i18n="language">JĘZYK</span>
             <span class="language-control">
               <span id="languageFlag" aria-hidden="true">🇵🇱</span>
               <select id="languageSelect" aria-label="Wybór języka">
@@ -69,45 +66,24 @@
         </section>
 
         <nav id="moduleGrid" aria-label="Moduły CRM">
-          <button class="tile-live tile-1" data-module="magistrala" type="button">
-            <span class="tile-copy"><strong data-i18n="m1t">MAGISTRALA HK</strong><small data-i18n="m1d">WDMUCHIWANIE<br>ŚWIATŁOWODÓW</small></span>
-          </button>
-          <button class="tile-live tile-2" data-module="przylacza" type="button">
-            <span class="tile-copy"><strong data-i18n="m2t">PRZYŁĄCZA HKA</strong><small data-i18n="m2d">WDMUCHIWANIE<br>DO OBIEKTÓW</small></span>
-          </button>
-          <button class="tile-live tile-3" data-module="mufy" type="button">
-            <span class="tile-copy"><strong data-i18n="m3t">SPAWANIE MUF</strong><small data-i18n="m3d">SPOINY<br>ABONENCKIE</small></span>
-          </button>
-          <button class="tile-live tile-4" data-module="pop" type="button">
-            <span class="tile-copy"><strong data-i18n="m4t">SPAWANIE POP</strong><small data-i18n="m4d">SPOINY<br>MAGISTRALNE</small></span>
-          </button>
-          <button class="tile-live tile-5" data-module="protokoly" type="button">
-            <span class="tile-copy"><strong data-i18n="m5t">PROTOKOŁY</strong><small data-i18n="m5d">DOKUMENTACJA<br>I RAPORTY</small></span>
-          </button>
-          <button class="tile-live tile-6" data-module="qgis" type="button">
-            <span class="tile-copy"><strong data-i18n="m6t">PROJEKTY QGIS</strong><small data-i18n="m6d">MAPY I LOKALIZACJE<br>SIECI</small></span>
-          </button>
-          <button class="tile-live tile-7" data-module="otdr" type="button">
-            <span class="tile-copy"><strong data-i18n="m7t">POMIARY OTDR</strong><small data-i18n="m7d">REFLEKTOMETRIA<br>ŚWIATŁOWODÓW</small></span>
-          </button>
-          <button class="tile-live tile-8" data-module="moc" type="button">
-            <span class="tile-copy"><strong data-i18n="m8t">POMIARY MOCY</strong><small data-i18n="m8d">POMIARY TŁUMIENIA<br>I MOCY OPTYCZNEJ</small></span>
-          </button>
-          <button class="tile-live tile-9" data-module="ustawienia" type="button">
-            <span class="tile-copy"><strong data-i18n="m9t">USTAWIENIA</strong><small data-i18n="m9d">KONFIGURACJA<br>APLIKACJI</small></span>
-          </button>
+          <button class="tile-live tile-1" data-module="magistrala" type="button"><span class="tile-copy"><strong data-i18n="m1t">MAGISTRALA HK</strong><small data-i18n="m1d">WDMUCHIWANIE<br>ŚWIATŁOWODÓW</small></span></button>
+          <button class="tile-live tile-2" data-module="przylacza" type="button"><span class="tile-copy"><strong data-i18n="m2t">PRZYŁĄCZA HKA</strong><small data-i18n="m2d">WDMUCHIWANIE<br>DO OBIEKTÓW</small></span></button>
+          <button class="tile-live tile-3" data-module="mufy" type="button"><span class="tile-copy"><strong data-i18n="m3t">SPAWANIE MUF</strong><small data-i18n="m3d">SPOINY<br>ABONENCKIE</small></span></button>
+          <button class="tile-live tile-4" data-module="pop" type="button"><span class="tile-copy"><strong data-i18n="m4t">SPAWANIE POP</strong><small data-i18n="m4d">SPOINY<br>MAGISTRALNE</small></span></button>
+          <button class="tile-live tile-5" data-module="protokoly" type="button"><span class="tile-copy"><strong data-i18n="m5t">PROTOKOŁY</strong><small data-i18n="m5d">DOKUMENTACJA<br>I RAPORTY</small></span></button>
+          <button class="tile-live tile-6" data-module="qgis" type="button"><span class="tile-copy"><strong data-i18n="m6t">PROJEKTY QGIS</strong><small data-i18n="m6d">MAPY I LOKALIZACJE<br>SIECI</small></span></button>
+          <button class="tile-live tile-7" data-module="otdr" type="button"><span class="tile-copy"><strong data-i18n="m7t">POMIARY OTDR</strong><small data-i18n="m7d">REFLEKTOMETRIA<br>ŚWIATŁOWODÓW</small></span></button>
+          <button class="tile-live tile-8" data-module="moc" type="button"><span class="tile-copy"><strong data-i18n="m8t">POMIARY MOCY</strong><small data-i18n="m8d">POMIARY TŁUMIENIA<br>I MOCY OPTYCZNEJ</small></span></button>
+          <button class="tile-live tile-9" data-module="ustawienia" type="button"><span class="tile-copy"><strong data-i18n="m9t">USTAWIENIA</strong><small data-i18n="m9d">KONFIGURACJA<br>APLIKACJI</small></span></button>
         </nav>
 
         <section class="bottom-live" aria-label="TFFBAU">
-          <div class="bottom-brand">
-            <strong>TFFBAU</strong>
-            <small data-i18n="tffbauDesc">BUDOWA KANALIZACJI TELETECHNICZNEJ<br>RUROCIĄGI ŚWIATŁOWODOWE</small>
-          </div>
+          <div class="bottom-brand"><strong>TFFBAU</strong><small data-i18n="tffbauDesc">BUDOWA KANALIZACJI TELETECHNICZNEJ<br>RUROCIĄGI ŚWIATŁOWODOWE</small></div>
           <p class="bottom-slogan" data-i18n="slogan">Łączymy świat<br>lepszymi możliwościami</p>
         </section>
       </div>
     </section>
   </main>
-  <script src="./app.js?v=pulpit01" defer></script>
+  <script src="./app.js?v=pulpit01-korekta01" defer></script>
 </body>
 </html>
