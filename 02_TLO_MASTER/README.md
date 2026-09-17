@@ -1,5 +1,7 @@
-# 02_TLO_MASTER
+# FOLDER 2 — TŁO MASTER / BASE
 
-Warstwa bazowa / tło danej karty. Przechowujemy tutaj wyłącznie tło bez aktywnych przycisków, ramek i elementów interaktywnych.
+**TU WRZUCAJ TYLKO STATYCZNE TŁO PEŁNEGO PŁÓTNA.**
 
-Każdy plik produkcyjny zachowuje pełne płótno 1440×3120 px i identyczne współrzędne względem MASTER-a.
+Dozwolone: tekstura, kolor, nieruchome światła i dekoracje tła. Bez urządzeń, bez tekstów, bez statusów, bez przycisków i bez elementów LIVE.
+
+Przykład nazwy: `01_MENU_GLOWNE_TLO_MASTER.png`

@@ -1,5 +1,7 @@
-# 04_RAMKI_IKONY_UI
+# FOLDER 4 — RAMKI / IKONY / UI
 
-Warstwa interfejsu użytkownika: ramki, kafle, przyciski, ikony, kontrolki i elementy przeznaczone do podpięcia aktywnych stref dotykowych.
+**TU WRZUCAJ TYLKO STATYCZNE ELEMENTY INTERFEJSU.**
 
-Grafika nie definiuje logiki kliknięcia. Logikę i hitboxy dokładamy w kodzie zgodnie z zatwierdzonym MASTER-em i testem na Samsung Galaxy S24 Ultra.
+Logo, ramki, obrysy, separatory, nieruchome ozdobne ikony i grafika przycisków. Bez tłumaczonych tekstów i bez dynamicznych stanów. ONLINE/GPS/PDF, język oraz animacja SYNCHRONIZUJ pozostają LIVE w kodzie.
+
+Przykład nazwy: `01_MENU_GLOWNE_RAMKI_IKONY_UI.png`

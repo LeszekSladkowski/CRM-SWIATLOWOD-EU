@@ -1,5 +1,7 @@
-# 05_MASTER_REFERENCJA
+# FOLDER 5 — MASTER REFERENCJA
 
-Pełny MASTER referencyjny karty wraz z mapą geometrii: numeracją elementów, współrzędnymi X/Y, wymiarami W/H i opisem aktywnych stref.
+**TU WRZUCAJ TYLKO MASTER TECHNICZNY X/Y/W/H.**
 
-To jest nadrzędny wzorzec odtwarzania karty 1:1 oraz punkt kontroli przed zamrożeniem kolejnego ekranu jako MASTER.
+Pełna zatwierdzona karta z origin X=0/Y=0, numeracją bloków, wymiarami X/Y/W/H i oznaczeniem obszarów LIVE. To dokumentacja techniczna — nie warstwa wyświetlana w aplikacji.
+
+Przykład nazwy: `01_MENU_GLOWNE_MASTER_REFERENCJA.png`

@@ -1,5 +1,7 @@
-# 01_GRAFIKI_KART_WEJSCIOWE
+# FOLDER 1 — GRAFIKI KART WEJŚCIOWE
 
-Folder wejściowy na zatwierdzone przez Leszka pełne grafiki kart CRM przed rozłożeniem na warstwy.
+**TU WRZUCAJ TYLKO PEŁNY ZATWIERDZONY MASTER ŹRÓDŁOWY 1:1.**
 
-Standard referencyjny: Samsung Galaxy S24 Ultra, pion, płótno 1440×3120 px. Nie kadrować, nie skalować pojedynczych elementów i nie zmieniać geometrii bez wyraźnej komendy użytkownika.
+To jest wzorzec przed rozkładem na warstwy. Nie wrzucaj tu BASE, MEDIA, UI ani MASTER REFERENCJI.
+
+Przykład nazwy: `01_MENU_GLOWNE_MASTER_WEJSCIOWY.png`

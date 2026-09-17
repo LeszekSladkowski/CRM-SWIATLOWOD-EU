@@ -1,5 +1,7 @@
-# 03_MEDIA_URZADZENIA
+# FOLDER 3 — MEDIA / URZĄDZENIA
 
-Warstwa mediów i urządzeń: zdjęcia, ilustracje techniczne, mapy, schematy, urządzenia, ikony sprzętu i pozostałe elementy wizualne niezależne od tła.
+**TU WRZUCAJ TYLKO OBIEKTY WIZUALNE I URZĄDZENIA NA PEŁNYM PŁÓTNIE 1:1.**
 
-Każdy element zachowuje pozycję względem pełnego płótna 1440×3120 px.
+Maszyny, mierniki, zdjęcia, clipboard, QGIS, pojazdy i elementy banera. Bez tekstów, bez ramek UI i bez logiki LIVE.
+
+Przykład nazwy: `01_MENU_GLOWNE_MEDIA_URZADZENIA.png`
