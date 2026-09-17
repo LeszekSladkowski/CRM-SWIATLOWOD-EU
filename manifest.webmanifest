@@ -1,0 +1,12 @@
+{
+  "name": "CRM ŚWIATŁOWÓD EU",
+  "short_name": "ŚWIATŁOWÓD EU",
+  "description": "CRM ŚWIATŁOWÓD EU",
+  "lang": "pl",
+  "start_url": "./",
+  "scope": "./",
+  "display": "standalone",
+  "orientation": "portrait",
+  "background_color": "#000000",
+  "theme_color": "#000000"
+}
