@@ -1,0 +1,54 @@
+/* ZERO-OVERLAY CLEAN MODE 01
+   Cel: na ekranach testowych widoczny ma być WYŁĄCZNIE zatwierdzony MASTER 1:1.
+   Żadne tłumaczenia, statusy, procenty, patche BASE ani efekty nacisku nie mogą
+   zasłaniać pikseli MASTER-a. Zostają wyłącznie niewidzialne hitboxy nawigacji. */
+
+/* MENU GŁÓWNE — usuń całą widoczną warstwę DOM nad MASTER-em. */
+#designStage .title-zone,
+#designStage .status-cell,
+#designStage .language-cell,
+#designStage .tile-copy,
+#designStage .bottom-live {
+  display: none !important;
+}
+#designStage .tile-live,
+#designStage .tile-live::before,
+#designStage .tile-live::after,
+#designStage .tile-live.pressed::after,
+#designStage .tile-live:active::after,
+#designStage .tile-live:focus-visible {
+  background: transparent !important;
+  box-shadow: none !important;
+  outline: none !important;
+}
+
+/* KARTA 1 AKTUALIZACJA — usuń WSZYSTKIE widoczne nakładki LIVE/PATCH.
+   SVG pozostaje tylko jako nośnik przezroczystych hitboxów. */
+#updateStage #basePatches,
+#updateStage #lastSyncText,
+#updateStage #syncTopVisual,
+#updateStage #installedVersion,
+#updateStage #installedBuild,
+#updateStage #installMode,
+#updateStage #updateMode,
+#updateStage #systemState,
+#updateStage .progress-track,
+#updateStage #progressFill,
+#updateStage #progressGlow,
+#updateStage #progressPct,
+#updateStage .scale-line,
+#updateStage #scaleLabels,
+#updateStage #processTitle,
+#updateStage #processDetail,
+#updateStage #stepName,
+#updateStage #stepDetail,
+#updateStage #etaLabel,
+#updateStage #etaValue,
+#updateStage #translationLayer {
+  display: none !important;
+}
+
+#updateStage .hitbox {
+  fill: transparent !important;
+  stroke: transparent !important;
+}
