@@ -58,7 +58,8 @@
   document.querySelectorAll('[data-card]').forEach(el => {
     el.addEventListener('click', () => {
       const card = el.getAttribute('data-card');
-      location.href = `./settings-engine.html?card=${card}`;
+      if(card === '1') location.href = './settings-update.html';
+      else location.href = `./settings-engine.html?card=${card}`;
     });
   });
 
