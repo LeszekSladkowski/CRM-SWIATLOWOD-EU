@@ -1,0 +1,46 @@
+{
+  "system": "LM-Technic MASTER LOCK",
+  "version": "1.0",
+  "status": "ACTIVE",
+  "scope": "ALL_FUTURE_MODULES_AND_CARDS",
+  "device_reference": "Samsung Galaxy S24 Ultra / portrait",
+  "canvas_reference": "1440x3120",
+  "rules": {
+    "one_change_at_a_time": true,
+    "user_test_required_before_master": true,
+    "master_files_are_immutable": true,
+    "no_cross_module_edits": true,
+    "no_opportunistic_refactors": true,
+    "cleanliness_check_before_next_card": true,
+    "duplicate_engines_allowed": false,
+    "duplicate_runtime_layers_allowed": false,
+    "legacy_code_must_not_be_reactivated": true,
+    "master_unlock_requires_explicit_user_approval": true
+  },
+  "workflow": [
+    "START_GALEZI",
+    "INWENTARYZACJA",
+    "JEDNA_ZMIANA",
+    "TEST_S24_ULTRA",
+    "MASTER_ZAMROZ",
+    "KONTROLA_CZYSTOSCI",
+    "DOPIERO_NASTEPNA_KARTA"
+  ],
+  "master_acceptance": {
+    "user_approval_required": true,
+    "tested_on_reference_device": true,
+    "duplicate_files": 0,
+    "duplicate_engines": 0,
+    "master_live_conflicts": 0,
+    "unexpected_cross_module_changes": 0
+  },
+  "commands": {
+    "START GALEZI": "Inventory only the selected module/card, identify its files and dependencies, and establish the starting point. Do not modify other modules.",
+    "TEST": "Apply only the single explicitly agreed change and stop for device testing.",
+    "MASTER ZAMROZ": "Register the user-approved state as immutable MASTER with commit, files, assets and dependencies.",
+    "KONTROLA CZYSTOSCI": "Check duplicates, obsolete CSS/JS, orphan files, duplicate engines, stale assets, MASTER/LIVE conflicts and cross-module modifications before continuing.",
+    "ODBLOKUJ MASTER": "Allowed only after explicit user approval naming the MASTER to unlock."
+  },
+  "masters": {},
+  "policy": "Every future module and card must follow this protocol. If a requested change conflicts with a locked MASTER, stop that change and report the conflict instead of silently modifying the MASTER."
+}
