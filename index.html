@@ -9,7 +9,7 @@
   <title>CRM ŚWIATŁOWÓD EU</title>
   <link rel="manifest" href="./manifest.webmanifest">
   <link rel="stylesheet" href="./styles.css?v=pixel-master-02">
-  <link rel="stylesheet" href="./zero-overlay-clean.css?v=zero-overlay-01">
+  <link rel="stylesheet" href="./zero-overlay-clean.css?v=online-fix-01">
 </head>
 <body class="notranslate">
   <main id="viewport" aria-label="CRM ŚWIATŁOWÓD EU">
@@ -21,7 +21,7 @@
           <p data-i18n="subtitle">MENU GŁÓWNE / PANEL STEROWANIA</p>
         </header>
         <section class="status-strip" aria-label="Status systemu">
-          <div id="onlineStatus" class="status-cell status-off" aria-live="polite"><span class="status-dot" aria-hidden="true"></span><span class="status-copy"><strong data-status-label="online">OFFLINE</strong></span></div>
+          <div id="onlineStatus" class="status-cell status-off" aria-live="polite"><span class="status-dot" aria-hidden="true"></span><span class="status-copy"><strong data-status-label="online">BRAK</strong></span></div>
           <div id="gpsStatus" class="status-cell status-off" aria-live="polite"><span class="gps-pin" aria-hidden="true"></span><span class="status-copy"><strong>GPS</strong><small data-status-label="gps">BRAK</small></span></div>
           <div id="pdfStatus" class="status-cell status-off" aria-live="polite"><span class="pdf-icon" aria-hidden="true">PDF</span><span class="status-copy"><strong>PDF</strong><small data-status-label="pdf">BRAK</small></span></div>
           <label class="language-cell" for="languageSelect"><span class="language-caption" data-i18n="language">JĘZYK</span><span class="language-control"><span id="languageFlag" aria-hidden="true">🇵🇱</span><select id="languageSelect" aria-label="Wybór języka"><option value="pl">POLSKI</option><option value="en">ENGLISH</option><option value="cs">ČEŠTINA</option><option value="da">DANSK</option><option value="de">DEUTSCH</option><option value="no">NORSK</option><option value="fr">FRANÇAIS</option><option value="ro">ROMÂNĂ</option><option value="tr">TÜRKÇE</option><option value="it">ITALIANO</option><option value="nl">NEDERLANDS</option><option value="uk">УКРАЇНСЬКА</option></select></span></label>
@@ -49,5 +49,6 @@
     });
   </script>
   <script src="./app.js?v=pixel-master-02" defer></script>
+  <script src="./online-status.js?v=online-fix-01" defer></script>
 </body>
 </html>
