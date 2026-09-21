@@ -1,8 +1,7 @@
-/* ZERO-OVERLAY CLEAN MODE 02
-   MASTER 1:1 pozostaje źródłem wyglądu.
-   Wyjątek kontrolowany: ONLINE może pokazać warstwę LIVE wyłącznie przy BRAKU internetu,
-   ponieważ zielony ONLINE jest już zapisany w polskim MASTER-ze.
-   Pozostałe statusy, tłumaczenia i patche nadal są ukryte. */
+/* ZERO-OVERLAY CLEAN MODE 03
+   MENU GŁÓWNE pozostaje chirurgicznie czyste.
+   KARTA 1 AKTUALIZACJA jest wyjątkiem funkcjonalnym: jej warstwa LIVE musi być widoczna,
+   ponieważ pokazuje rzeczywisty przebieg sprawdzania/aktualizacji. */
 
 /* MENU GŁÓWNE — ukryj widoczną warstwę DOM nad MASTER-em z wyjątkiem ONLINE. */
 #designStage .title-zone,
@@ -14,7 +13,6 @@
   display: none !important;
 }
 
-/* ONLINE: przy połączeniu pokazuje piksele MASTER-a; przy braku internetu LIVE pokazuje czerwone BRAK. */
 #designStage #onlineStatus.online {
   display: none !important;
 }
@@ -33,8 +31,9 @@
   outline: none !important;
 }
 
-/* KARTA 1 AKTUALIZACJA — usuń WSZYSTKIE widoczne nakładki LIVE/PATCH.
-   SVG pozostaje tylko jako nośnik przezroczystych hitboxów. */
+/* KARTA 1 AKTUALIZACJA — LIVE WŁĄCZONY.
+   Patch BASE służy tylko do czystego wymazania statycznych napisów MASTER-a w polach,
+   które następnie wypełnia silnik LIVE. Nie tworzymy czarnych prostokątów. */
 #updateStage #basePatches,
 #updateStage #lastSyncText,
 #updateStage #syncTopVisual,
@@ -54,7 +53,10 @@
 #updateStage #stepName,
 #updateStage #stepDetail,
 #updateStage #etaLabel,
-#updateStage #etaValue,
+#updateStage #etaValue {
+  display: revert !important;
+}
+
 #updateStage #translationLayer {
   display: none !important;
 }
