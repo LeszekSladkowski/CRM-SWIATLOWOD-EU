@@ -1,16 +1,27 @@
-/* ZERO-OVERLAY CLEAN MODE 01
-   Cel: na ekranach testowych widoczny ma być WYŁĄCZNIE zatwierdzony MASTER 1:1.
-   Żadne tłumaczenia, statusy, procenty, patche BASE ani efekty nacisku nie mogą
-   zasłaniać pikseli MASTER-a. Zostają wyłącznie niewidzialne hitboxy nawigacji. */
+/* ZERO-OVERLAY CLEAN MODE 02
+   MASTER 1:1 pozostaje źródłem wyglądu.
+   Wyjątek kontrolowany: ONLINE może pokazać warstwę LIVE wyłącznie przy BRAKU internetu,
+   ponieważ zielony ONLINE jest już zapisany w polskim MASTER-ze.
+   Pozostałe statusy, tłumaczenia i patche nadal są ukryte. */
 
-/* MENU GŁÓWNE — usuń całą widoczną warstwę DOM nad MASTER-em. */
+/* MENU GŁÓWNE — ukryj widoczną warstwę DOM nad MASTER-em z wyjątkiem ONLINE. */
 #designStage .title-zone,
-#designStage .status-cell,
+#designStage #gpsStatus,
+#designStage #pdfStatus,
 #designStage .language-cell,
 #designStage .tile-copy,
 #designStage .bottom-live {
   display: none !important;
 }
+
+/* ONLINE: przy połączeniu pokazuje piksele MASTER-a; przy braku internetu LIVE pokazuje czerwone BRAK. */
+#designStage #onlineStatus.online {
+  display: none !important;
+}
+#designStage #onlineStatus.status-off {
+  display: flex !important;
+}
+
 #designStage .tile-live,
 #designStage .tile-live::before,
 #designStage .tile-live::after,
