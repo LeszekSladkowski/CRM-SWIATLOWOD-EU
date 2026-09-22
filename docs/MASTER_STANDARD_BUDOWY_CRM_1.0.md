@@ -116,6 +116,47 @@ Dla LIVE porównujemy pozycję, rozmiar, styl i geometrię; jego aktualna treś�
 
 **FAIL → STOP → naprawa właściwego źródła → ponowne QA. PASS → DEPLOY → test na urządzeniu → akceptacja → MASTER.**
 
+## KM-20 — MASTER FILE LOCK / ZERO ZAUFANIA — PEŁNA KONTROLA
+**Status: MASTER LOCK — obowiązkowa procedura dla każdej grafiki i każdej karty.**
+
+Celem tej zasady jest wyeliminowanie pracy „na słowo”, na podglądzie, na pamięci lub na założeniu. **Każde PASS musi wynikać z pomiaru konkretnego fizycznego pliku. Brak pomiaru = NIEZWERYFIKOWANE, nigdy PASS.**
+
+### A. Jedyny dopuszczalny MASTER źródłowy
+Dla CRM ŚWIATŁOWÓD EU źródłowy MASTER karty musi być fizycznym plikiem **PNG 1440×3120 px**, zgodnym z ustalonym trybem produkcyjnym i geometrią **X0/Y0**. Screenshot, miniatura, podgląd aplikacji, JPEG ani obraz ponownie przesłany do czatu jako zdjęcie **nie zastępuje MASTER-a**.
+
+### B. Bezpieczna droga pliku
+Obowiązuje droga:
+**PLIK ŹRÓDŁOWY → KONTROLA → POBRANE/FILES → BEZPOŚREDNI UPLOAD DO GITHUB `01_GRAFIKI_MASTER` → KONTROLA PO UPLOADZIE → LOCK.**
+
+Zakazane jest używanie ponownie przesłanego do czatu zdjęcia jako źródła rozbioru lub jako dowodu wymiarów MASTER-a. Potwierdzony test z 22.09.2026 wykazał, że ścieżka obrazu w rozmowie może zwrócić przetworzoną wersję podglądową, podczas gdy bezpośredni upload oryginalnego pliku do GitHuba zachowuje plik.
+
+### C. Kontrola przed rozbiorem
+Przed jakąkolwiek operacją trzeba wskazać dokładny plik źródłowy i zweryfikować co najmniej: nazwę/ścieżkę, format, W×H oraz integralność/identyfikator pliku, gdy jest dostępny. Dla wymagania 1440×3120 każda inna geometria = **FAIL → STOP**.
+
+Nie wolno deklarować „zgodne”, „1440×3120”, „MASTER”, „wgrane” ani „PASS” na podstawie wyglądu, przypuszczenia, nazwy pliku lub pamięci.
+
+### D. Rozbiór wyłącznie z oryginału GitHub
+Po LOCK źródłem rozbioru jest wyłącznie oryginalny MASTER z `01_GRAFIKI_MASTER`. Nie wolno zastępować go screenshotem, miniaturą, obrazem z galerii ani kopią ponownie przesłaną do rozmowy.
+
+Rozbiór daje cztery logiczne rezultaty: **TŁO / MEDIA / UI STATIC / MASTER REFERENCJA X/Y/W/H**. Każda graficzna warstwa produkcyjna zachowuje pełne płótno **1440×3120, X0/Y0**. LIVE jest usuwane u źródła zgodnie z KM-04. Zakazane są maski, overlaye i łatki zgodnie z KM-05.
+
+### E. Raport kontrolny widoczny dla użytkownika
+Po każdym etapie obowiązuje krótki raport, aby użytkownik nie musiał ufać deklaracji bez dowodu:
+**ŹRÓDŁO: PASS/FAIL/NIEZWERYFIKOWANE | TŁO: PASS/FAIL | MEDIA: PASS/FAIL | UI STATIC: PASS/FAIL | REFERENCJA: PASS/FAIL | REKONSTRUKCJA 1:1: PASS/FAIL.**
+
+Jeżeli którakolwiek pozycja ma `FAIL` albo wymagana kontrola pozostaje `NIEZWERYFIKOWANE` — **STOP. Nie przechodzimy do następnego etapu.**
+
+### F. Kontrola po GitHubie
+Po zapisaniu wyników w GitHubie kontrolę wykonuje się ponownie na plikach znajdujących się w repozytorium. Dopiero po pozytywnym wyniku można przejść do rekonstrukcji i QA.
+
+### G. Rekonstrukcja i porównanie 1:1
+Warstwy są składane zgodnie z referencją X/Y/W/H i porównywane z oryginalną `GRAFIKA_MASTER`. Sprawdzane są co najmniej: płótno, geometria, pozycje, proporcje, ostrość, media, ramki/ikony, miejsca LIVE oraz brak masek, duplikatów i przesunięć.
+
+**FAIL → STOP → powrót do właściwego źródła błędu. PASS → dopiero następny etap.**
+
+### H. Zasada odpowiedzialności technicznej
+Automatyzacja może wykonywać operacje techniczne, ale nie może ukrywać ich wyniku przed użytkownikiem. Użytkownik zawsze otrzymuje jednoznaczny status kontroli. Jeśli narzędzie nie pozwala fizycznie zweryfikować danego parametru, należy napisać **NIEZWERYFIKOWANE** zamiast zgadywać.
+
 ## Standard katalogu karty
 Aby uniknąć konfliktu nazw, każda karta przechowuje nietykalny wzorzec oraz cztery rezultaty techniczne:
 - `01_GRAFIKA_MASTER/` — oryginalny, nienaruszony wzorzec porównawczy;
@@ -129,4 +170,4 @@ Logiczny rozbiór pozostaje **4×**: TŁO + MEDIA + UI STATIC + MASTER REFERENCJ
 ---
 
 ### Święta zasada wykonawcza
-**MASTER → CZYSTY ROZBIÓR 1:1 → LIVE REMOVE AT SOURCE → STATIC + CENTRALNY LIVE → BUILD → MASTER VISUAL QA → DEPLOY → TEST → AKCEPTACJA → MASTER.**
+**MASTER → FIZYCZNA WALIDACJA → GITHUB SOURCE LOCK → CZYSTY ROZBIÓR 1:1 → LIVE REMOVE AT SOURCE → KONTROLA 4× → STATIC + CENTRALNY LIVE → BUILD → MASTER VISUAL QA → DEPLOY → TEST → AKCEPTACJA → MASTER.**
