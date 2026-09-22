@@ -48,8 +48,28 @@ Każda wspólna funkcja posiada dokładnie jedno źródło wykonawcze. Karty i g
 ## KM-07 — SINGLE SOURCE OF TRUTH
 Każdy globalny stan istnieje raz. Język, ONLINE, GPS, PDF i inne globalne dane mają jedno źródło stanu i wiele widoków. Zakazane są równoległe kopie tego samego stanu dla poszczególnych kart.
 
-## KM-08 — CENTRALNY SYSTEM JĘZYKOWY
-Jeden centralny silnik obsługuje **12 języków**. Wybrany język jest globalnym stanem CRM. Teksty zależne od języka są LIVE i nie są wypalane w PNG. Dokładna lista 12 języków musi zostać zatwierdzona przed implementacją przełącznika języka.
+## KM-08 — CENTRALNY SYSTEM JĘZYKOWY — MASTER LOCK 12 JĘZYKÓW
+**Status: ŚWIĘTA ZASADA / MASTER LOCK — zatwierdzone przez użytkownika 22.09.2026.**
+
+Cały CRM korzysta z **jednego centralnego silnika językowego** i dokładnie **12 zatwierdzonych języków**:
+1. polski — `pl`
+2. angielski — `en`
+3. czeski — `cs`
+4. duński — `da`
+5. niemiecki — `de`
+6. norweski — `no`
+7. francuski — `fr`
+8. rumuński — `ro`
+9. turecki — `tr`
+10. włoski — `it`
+11. holenderski — `nl`
+12. ukraiński — `uk`
+
+**Zasada wykonawcza: 1 CRM → 1 centralny silnik językowy → 12 języków → 1 globalnie wybrany język dla całej aplikacji.**
+
+Zmiana języka ma obowiązywać globalnie we wszystkich kartach, gałęziach, formularzach, tabelach, komunikatach, przyciskach, protokołach i ustawieniach. Teksty zależne od języka są LIVE i nie mogą być wypalane w produkcyjnych PNG. Nie tworzymy osobnych silników językowych dla kart ani 12 graficznych kopii tej samej karty. Wybrany język ma być przechowywany jako jeden globalny stan i zachowany po ponownym uruchomieniu aplikacji.
+
+**Lista 12 języków jest zamrożona. Nie wolno jej dodawać, usuwać, zamieniać, zmieniać kolejności ani zastępować bez nowej, jednoznacznej decyzji użytkownika znoszącej ten MASTER LOCK.**
 
 ## KM-09 — CENTRALNE KONTROLKI LIVE
 Stała kolejność: **ONLINE → GPS AKTYWNY → PDF GOTOWY**. ONLINE odzwierciedla rzeczywistą łączność, GPS rzeczywistą dostępność lokalizacji, a PDF GOTOWY globalny rzeczywisty stan dokumentów. Kontrolki są LIVE i korzystają z centralnego silnika.
