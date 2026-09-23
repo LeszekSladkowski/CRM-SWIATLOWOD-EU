@@ -1,0 +1,158 @@
+{
+  "standard": "CRM852 MASTER",
+  "canvas": {
+    "x": 0,
+    "y": 0,
+    "w": 852,
+    "h": 1846
+  },
+  "02_BASE_TLO": {
+    "file": "02_BASE_TLO_852x1846_RGBA.png",
+    "x": 0,
+    "y": 0,
+    "w": 852,
+    "h": 1846,
+    "format": "PNG",
+    "mode": "RGBA",
+    "sha256": "f6496a1c48aa1dafca5396b2e83706990165975fb7af550057cfec1e6ec85a3d"
+  },
+  "03_MEDIA_URZADZENIA": {
+    "meta": {
+      "file": "03_MEDIA_URZADZENIA_852x1846_RGBA.png",
+      "x": 0,
+      "y": 0,
+      "w": 852,
+      "h": 1846,
+      "format": "PNG",
+      "mode": "RGBA",
+      "sha256": "4d32969ab99c7d6350aeba8a42c00f41e7860b1154f11b99ac63048dadb99796"
+    },
+    "regions": [
+      [
+        18,
+        390,
+        278,
+        590
+      ],
+      [
+        292,
+        390,
+        546,
+        590
+      ],
+      [
+        562,
+        390,
+        819,
+        590
+      ],
+      [
+        18,
+        720,
+        278,
+        930
+      ],
+      [
+        292,
+        720,
+        546,
+        930
+      ],
+      [
+        562,
+        720,
+        819,
+        930
+      ],
+      [
+        18,
+        1050,
+        278,
+        1240
+      ],
+      [
+        292,
+        1050,
+        546,
+        1240
+      ],
+      [
+        562,
+        1050,
+        819,
+        1240
+      ],
+      [
+        18,
+        1382,
+        819,
+        1588
+      ]
+    ]
+  },
+  "04_UI_STATIC": {
+    "meta": {
+      "file": "04_UI_STATIC_852x1846_RGBA.png",
+      "x": 0,
+      "y": 0,
+      "w": 852,
+      "h": 1846,
+      "format": "PNG",
+      "mode": "RGBA",
+      "sha256": "1a7778dddb63be4e1999ac592da886f45260cdbf627ff8202778587e5a6a014b"
+    },
+    "regions": [
+      [
+        0,
+        0,
+        852,
+        389
+      ],
+      [
+        0,
+        590,
+        852,
+        720
+      ],
+      [
+        0,
+        930,
+        852,
+        1050
+      ],
+      [
+        0,
+        1240,
+        852,
+        1382
+      ],
+      [
+        0,
+        1588,
+        852,
+        1846
+      ]
+    ]
+  },
+  "reconstruction": {
+    "pixel_exact": true,
+    "meta": {
+      "file": "REKONSTRUKCJA_TEST.png",
+      "x": 0,
+      "y": 0,
+      "w": 852,
+      "h": 1846,
+      "format": "PNG",
+      "mode": "RGBA",
+      "sha256": "ea4820fd138f2c3484d58ebbc8ea12dfc232e299435a37e3dd45a5b3a4e609ac"
+    }
+  },
+  "validation": {
+    "01_MASTER": "PASS",
+    "02_BASE_TLO": "PASS",
+    "03_MEDIA_URZADZENIA": "PASS",
+    "04_UI_STATIC": "PASS",
+    "05_MASTER_TECHNICZNY": "PASS",
+    "REKONSTRUKCJA_1_1": "PASS"
+  }
+}
