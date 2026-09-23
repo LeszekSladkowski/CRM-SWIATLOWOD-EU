@@ -1,0 +1,56 @@
+{
+  "master": {
+    "filename": "PANEL_STEROWANIA_MASTER_1440x3120_RGBA.png",
+    "width": 1440,
+    "height": 3120,
+    "format": "PNG",
+    "mode": "RGBA",
+    "x": 0,
+    "y": 0
+  },
+  "coordinate_system": {
+    "origin": "top-left",
+    "canvas": [
+      1440,
+      3120
+    ],
+    "x_lock": 0,
+    "y_lock": 0
+  },
+  "classification_status": {
+    "02_BASE_TLO": "NOT SEMANTICALLY SEPARATED — transparent placeholder; flattened source has no recoverable original background layer",
+    "03_MEDIA_URZADZENIA": "NOT SEMANTICALLY SEPARATED — transparent placeholder; flattened source has no recoverable original device layer",
+    "04_UI_STATIC": "FULL FLATTENED MASTER retained to guarantee pixel-identical reconstruction",
+    "LIVE": "NOT REMOVED — cannot remove source pixels without reconstruction/inpainting/masking, prohibited by command"
+  },
+  "reconstruction_pixel_identical": true,
+  "validation": {
+    "02_BASE_TLO_1440x3120_RGBA.png": {
+      "size": [
+        1440,
+        3120
+      ],
+      "mode": "RGBA",
+      "format": "PNG",
+      "sha256": "b342f29af404536be6c5e6419db1fbeef18239cb31ac57407c3280aa7406692b"
+    },
+    "03_MEDIA_URZADZENIA_1440x3120_RGBA.png": {
+      "size": [
+        1440,
+        3120
+      ],
+      "mode": "RGBA",
+      "format": "PNG",
+      "sha256": "b342f29af404536be6c5e6419db1fbeef18239cb31ac57407c3280aa7406692b"
+    },
+    "04_UI_STATIC_1440x3120_RGBA.png": {
+      "size": [
+        1440,
+        3120
+      ],
+      "mode": "RGBA",
+      "format": "PNG",
+      "sha256": "94f9bde7d45c3592a6481ef857ea79cf1dfc8b647aa235372c45c8104e6f27db"
+    }
+  }
+}
